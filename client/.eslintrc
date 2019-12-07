@@ -2,8 +2,7 @@
   "env": {
     "browser": true,
     "es6": true,
-    "jest": true,
-    "cypress/globals": true
+    "jest": true
   },
   "parser": "babel-eslint",
   "parserOptions": {
@@ -13,16 +12,12 @@
       "jsx": true
     }
   },
-  "extends": ["airbnb", "prettier", "plugin:cypress/recommended"],
-  "plugins": ["react-hooks", "prettier", "cypress", "chai-friendly"],
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["react-hooks", "prettier"],
   "rules": {
     "react-hooks/rules-of-hooks": "error",
     "prettier/prettier": "error",
     "react/jsx-filename-extension": 0,
-    "react/jsx-one-expression-per-line": 0,
-    "jsx-a11y/label-has-for": 0,
-    "no-unused-expressions": 0,
-    "chai-friendly/no-unused-expressions": 2,
     "import/no-unresolved": 0
   }
 }

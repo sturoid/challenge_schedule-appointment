@@ -2,7 +2,12 @@ import React from 'react';
 import { childrenType } from '~/lib/prop-types';
 
 export default class ErrorBoundary extends React.Component {
-  state = { hasError: false };
+  constructor(props) {
+    super(props);
+    this.state = {
+      hasError: false
+    };
+  }
 
   componentDidCatch(error, info) {
     // Display fallback UI

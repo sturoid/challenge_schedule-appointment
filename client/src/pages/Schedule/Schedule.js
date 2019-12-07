@@ -3,7 +3,7 @@ import React from 'react';
 const Schedule = () => {
   return (
     <div>
-      <h1 data-test="title">Schdule some stuff!</h1>
+      <h1>Schdule some stuff!</h1>
     </div>
   );
 };

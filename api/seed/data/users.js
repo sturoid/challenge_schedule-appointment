@@ -1,8 +1,26 @@
 module.exports = [
   {
-    name: 'Rick Morty',
-    email: 'user@gmail.com',
-    // Password is "password".
-    password: '$2b$10$SwB9Gzo.s7dLm7gjdusTQuXlVKSYCQ0I/G9RSiGgmxxd5P8kEUB.G'
+    name: 'Natalia Stanton Jr.',
+    timezone: 'Central Time (US & Canada)'
+  },
+  {
+    name: 'Christy Schumm',
+    timezone: 'America/North_Dakota/New_Salem'
+  },
+  {
+    name: 'Nola Murazik V',
+    timezone: 'America/Yakutat'
+  },
+  {
+    name: "Elyssa O'Kon",
+    timezone: 'Central Time (US & Canada)'
+  },
+  {
+    name: 'Nola Murazik V',
+    timezone: 'America/Yakutat'
+  },
+  {
+    name: 'Dr. Geovany Keebler',
+    timezone: 'Central Time (US & Canada)'
   }
 ];

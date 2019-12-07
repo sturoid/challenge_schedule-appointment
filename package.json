@@ -8,6 +8,7 @@
     "node": ">=8.11.3"
   },
   "scripts": {
+    "seed": "cd ./api && npm run db:seed",
     "start": "concurrently \"npm run start:api\" \"npm run start:client\"",
     "start:api": "cd ./api && npm start",
     "start:client": "cd ./client && npm start"
