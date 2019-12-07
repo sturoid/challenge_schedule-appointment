@@ -1,0 +1,58 @@
+{
+  "name": "betterupschedulerapi",
+  "version": "1.0.0",
+  "description": "BetterUp Scheduler API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "dev": "nodemon ./index.js",
+    "db:seed": "node ./seed/run",
+    "test": "jest --watch",
+    "test:once": "jest",
+    "test:all": "jest",
+    "packages:update": "npm install -g npm-check-updates && ncu -u"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.9.13",
+    "graphql": "^14.5.8",
+    "jsonwebtoken": "^8.5.1",
+    "lodash.merge": "^4.6.2",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.7.13",
+    "validator": "^12.1.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "10.0.3",
+    "dotenv": "8.2.0",
+    "eslint": "6.7.2",
+    "eslint-config-prettier": "6.7.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "3.1.1",
+    "husky": "3.1.0",
+    "jest": "24.9.0",
+    "lint-staged": "9.5.0",
+    "nodemon": "2.0.1",
+    "prettier": "1.19.1"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupFiles": [
+      "./config/jest-setup-each-test.js"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-commit": "git update-index -g"
+    }
+  }
+}
