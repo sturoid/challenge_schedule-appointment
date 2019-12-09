@@ -1,6 +1,17 @@
 const mongoose = require('mongoose');
 
-const schema = new mongoose.Schema(
+const USER_ROLES = {
+  coach: 'coach'
+};
+
+Object.freeze(USER_ROLES);
+
+const roleSchema = new mongoose.Schema(
+  { name: { type: String, enum: [USER_ROLES['coach']] } },
+  { _id: false }
+);
+
+const userSchema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -9,6 +20,10 @@ const schema = new mongoose.Schema(
     timezone: {
       type: String,
       required: true
+    },
+    roles: {
+      type: [roleSchema],
+      default: []
     }
   },
   {
@@ -17,10 +32,10 @@ const schema = new mongoose.Schema(
   }
 );
 
-schema.virtual('id').get(function() {
+userSchema.virtual('id').get(function() {
   return this._id;
 });
 
-schema.set('toJSON', { virtuals: true });
+userSchema.set('toJSON', { virtuals: true });
 
-module.exports = mongoose.model('User', schema);
+module.exports = mongoose.model('User', userSchema);
