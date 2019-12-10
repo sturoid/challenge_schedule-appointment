@@ -15,7 +15,7 @@ const schema = new mongoose.Schema(
       type: Date,
       required: true
     },
-    client: {
+    user: {
       type: ObjectId,
       ref: 'User'
     },

@@ -1,4 +1,4 @@
-const coachRoles = [{ name: 'coach' }];
+const coachRoles = { roles: [{ name: 'coach' }] };
 
 module.exports = [
   {
