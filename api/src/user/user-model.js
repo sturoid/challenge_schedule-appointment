@@ -1,12 +1,8 @@
 const mongoose = require('mongoose');
+const { isCoach } = require('./user-methods');
+const { USER_ROLES } = require('./user-consts');
 
-const USER_ROLES = {
-  coach: 'coach'
-};
-
-Object.freeze(USER_ROLES);
-
-const roleSchema = new mongoose.Schema(
+const userRoleSchema = new mongoose.Schema(
   { name: { type: String, enum: [USER_ROLES['coach']] } },
   { _id: false }
 );
@@ -22,7 +18,7 @@ const userSchema = new mongoose.Schema(
       required: true
     },
     roles: {
-      type: [roleSchema],
+      type: [userRoleSchema],
       default: []
     }
   },
@@ -31,6 +27,10 @@ const userSchema = new mongoose.Schema(
     versionKey: false
   }
 );
+
+userSchema.methods.isCoach = function() {
+  return isCoach(this);
+};
 
 userSchema.virtual('id').get(function() {
   return this._id;

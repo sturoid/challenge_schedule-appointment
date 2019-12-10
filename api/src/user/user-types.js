@@ -1,10 +1,12 @@
 module.exports = `
   type Query {
-    me: User
+    user(id: ID!): User
   }
 
   type User {
-    _id: String
-    name: String
+    _id: ID!
+    name: String!
+    timezone: String!
+    appointments: [Appointment]!
   }
 `;

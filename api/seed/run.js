@@ -1,6 +1,6 @@
 if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 const { set } = require('date-fns');
-const { sample, groupBy } = require('lodash');
+const { sample } = require('lodash');
 
 const db = require('../config/db');
 const User = require('../src/user/user-model');
@@ -21,15 +21,17 @@ async function createAppointments() {
     const appts = Array(10)
       .fill()
       .map(() => {
-        const hours = sample(
-          Array(22)
-            .fill()
-            .map((_, i) => i + 1)
-        );
-
-        const minutes = sample([0, 30]);
-
-        const startTime = { hours, minutes, seconds: 0, milliseconds: 0 };
+        const today = new Date();
+        const startTime = {
+          hours: sample(
+            Array(22)
+              .fill()
+              .map((_, i) => i + 1)
+          ),
+          minutes: sample([0, 30]),
+          seconds: 0,
+          milliseconds: 0
+        };
         const endTime = {
           hours: startTime.minutes === 0 ? startTime.hours : startTime.hours + 1,
           minutes: startTime.minutes === 0 ? 30 : 0,
@@ -37,14 +39,12 @@ async function createAppointments() {
           milliseconds: 0
         };
 
-        let appointment = {
-          start: set(new Date(), { ...startTime }),
-          end: set(new Date(), { ...endTime }),
+        return {
+          start: set(today, { ...startTime }),
+          end: set(today, { ...endTime }),
           user: users[0],
           coach: sample(coaches)
         };
-
-        return appointment;
       });
 
     return Appointment.create(appts);
@@ -79,5 +79,3 @@ async function create() {
     console.log('Done');
   }
 })();
-
-module.exports = { checkConflicts };

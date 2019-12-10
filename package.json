@@ -10,8 +10,11 @@
   "scripts": {
     "seed": "cd ./api && npm run db:seed",
     "start": "concurrently \"npm run start:api\" \"npm run start:client\"",
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:client\"",
     "start:api": "cd ./api && npm start",
-    "start:client": "cd ./client && npm start"
+    "dev:api": "cd ./api && npm run dev",
+    "start:client": "cd ./client && npm start",
+    "dev:client": "cd ./client && npm start"
   },
   "dependencies": {
     "concurrently": "^5.0.0"
