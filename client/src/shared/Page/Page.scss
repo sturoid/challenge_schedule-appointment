@@ -1,0 +1,13 @@
+.page {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  @media (max-width: 768px) {
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 5rem;
+    font-weight: 300;
+  }
+}
