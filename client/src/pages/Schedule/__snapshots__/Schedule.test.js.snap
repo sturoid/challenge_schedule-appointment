@@ -13,15 +13,19 @@ exports[`Schedule renders correctly 1`] = `
     <div
       className="coach"
     >
-      <h2>
-        Bert Nelson
-      </h2>
       <div
-        className="appointments"
+        className="coach-name"
       >
-        <div>
+        Bert Nelson
+      </div>
+      <div
+        className="coach-appointments"
+      >
+        <div
+          className="coach-appointment"
+        >
           2019-12-11 17:00:00Z
-           - 
+           : 
           2019-12-11 17:30:00Z
         </div>
       </div>
@@ -29,20 +33,26 @@ exports[`Schedule renders correctly 1`] = `
     <div
       className="coach"
     >
-      <h2>
-        Bobby Booshay
-      </h2>
       <div
-        className="appointments"
+        className="coach-name"
       >
-        <div>
+        Bobby Booshay
+      </div>
+      <div
+        className="coach-appointments"
+      >
+        <div
+          className="coach-appointment"
+        >
           2019-12-11 17:00:00Z
-           - 
+           : 
           2019-12-11 17:30:00Z
         </div>
-        <div>
+        <div
+          className="coach-appointment"
+        >
           2019-12-11 18:30:00Z
-           - 
+           : 
           2019-12-11 19:00:00Z
         </div>
       </div>

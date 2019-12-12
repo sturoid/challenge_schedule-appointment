@@ -8,6 +8,7 @@ const coaches = [
     name: 'Bert Nelson',
     appointments: [
       {
+        id: 1,
         start: '2019-12-11 17:00:00Z',
         end: '2019-12-11 17:30:00Z'
       }
@@ -18,10 +19,12 @@ const coaches = [
     name: 'Bobby Booshay',
     appointments: [
       {
+        id: 1,
         start: '2019-12-11 17:00:00Z',
         end: '2019-12-11 17:30:00Z'
       },
       {
+        id: 2,
         start: '2019-12-11 18:30:00Z',
         end: '2019-12-11 19:00:00Z'
       }

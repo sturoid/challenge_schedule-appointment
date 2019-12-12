@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Coach renders correctly 1`] = `
+<div
+  className="coach"
+>
+  <div
+    className="coach-name"
+  >
+    Bob Test
+  </div>
+  <div
+    className="coach-appointments"
+  >
+    <div
+      className="coach-appointment"
+    >
+      Wed Dec 11 2019 11:30:00 GMT-0700 (Mountain Standard Time)
+       : 
+      Wed Dec 11 2019 12:00:00 GMT-0700 (Mountain Standard Time)
+    </div>
+    <div
+      className="coach-appointment"
+    >
+      Wed Dec 11 2019 14:00:00 GMT-0700 (Mountain Standard Time)
+       : 
+      Wed Dec 11 2019 14:30:00 GMT-0700 (Mountain Standard Time)
+    </div>
+  </div>
+</div>
+`;

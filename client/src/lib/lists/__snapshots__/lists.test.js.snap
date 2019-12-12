@@ -1,0 +1,246 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#getScheduleTime gets the correct list of hours and minutes 1`] = `
+Array [
+  Object {
+    "hours": 0,
+    "minutes": 0,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 0,
+    "minutes": 30,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 1,
+    "minutes": 0,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 1,
+    "minutes": 30,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 2,
+    "minutes": 0,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 2,
+    "minutes": 30,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 3,
+    "minutes": 0,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 3,
+    "minutes": 30,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 4,
+    "minutes": 0,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 4,
+    "minutes": 30,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 5,
+    "minutes": 0,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 5,
+    "minutes": 30,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 6,
+    "minutes": 0,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 6,
+    "minutes": 30,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 7,
+    "minutes": 0,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 7,
+    "minutes": 30,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 8,
+    "minutes": 0,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 8,
+    "minutes": 30,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 9,
+    "minutes": 0,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 9,
+    "minutes": 30,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 10,
+    "minutes": 0,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 10,
+    "minutes": 30,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 11,
+    "minutes": 0,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 11,
+    "minutes": 30,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 12,
+    "minutes": 0,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 12,
+    "minutes": 30,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 13,
+    "minutes": 0,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 13,
+    "minutes": 30,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 14,
+    "minutes": 0,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 14,
+    "minutes": 30,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 15,
+    "minutes": 0,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 15,
+    "minutes": 30,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 16,
+    "minutes": 0,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 16,
+    "minutes": 30,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 17,
+    "minutes": 0,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 17,
+    "minutes": 30,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 18,
+    "minutes": 0,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 18,
+    "minutes": 30,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 19,
+    "minutes": 0,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 19,
+    "minutes": 30,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 20,
+    "minutes": 0,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 20,
+    "minutes": 30,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 21,
+    "minutes": 0,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 21,
+    "minutes": 30,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 22,
+    "minutes": 0,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 22,
+    "minutes": 30,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 23,
+    "minutes": 0,
+    "seconds": 0,
+  },
+  Object {
+    "hours": 23,
+    "minutes": 30,
+    "seconds": 0,
+  },
+]
+`;

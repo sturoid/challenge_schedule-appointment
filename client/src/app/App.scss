@@ -1,7 +1,6 @@
 html {
-  font-family: 'Montserrat', sans-serif;
+  color: var(--grey800);
   font-size: 62.5%;
-  letter-spacing: 0.05em;
   margin: 0;
 }
 
@@ -10,8 +9,4 @@ body {
   font-size: 1.4rem;
   letter-spacing: 0.05em;
   margin: 0;
-}
-
-a {
-  text-decoration: none;
 }
