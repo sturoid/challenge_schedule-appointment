@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Page from '../../shared/Page';
 import './Schedule.scss';
 
@@ -7,16 +8,16 @@ const Schedule = ({ coaches }) => {
     <Page>
       <h1>Schedule</h1>
       <section className="schedule">
-        {coaches.map(({ name, appointments }) => {
+        {coaches.map(({ id, name, appointments }) => {
           return (
-            <div className="coach">
+            <div key={id} className="coach">
               <h2>{name}</h2>
               {appointments && appointments.length ? (
                 <div className="appointments">
                   {appointments.map(a => {
                     return (
-                      <div>
-                        {a.start} - {a.end}
+                      <div key={a.id}>
+                        {a.start}:{a.end}
                       </div>
                     );
                   })}
@@ -30,6 +31,10 @@ const Schedule = ({ coaches }) => {
       </section>
     </Page>
   );
+};
+
+Schedule.props = {
+  coaches: PropTypes.arrayOf(PropTypes.any)
 };
 
 export default Schedule;

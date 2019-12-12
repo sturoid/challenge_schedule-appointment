@@ -8,6 +8,7 @@ module.exports = `
 
   type User {
     _id: ID!
+    id: ID!
     name: String!
     timezone: String!
     appointments: [Appointment]!

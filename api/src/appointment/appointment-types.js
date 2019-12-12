@@ -6,6 +6,7 @@ module.exports = `
 
   type Appointment  {
     _id: ID!
+    id: ID!
     start(inTimezone: Boolean): String!
     end(inTimezone: Boolean): String!
     coach: User!

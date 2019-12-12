@@ -1,4 +1,4 @@
-import 'cross-fetch/polyfill'; // Needed for compiled code to run correctly on Apollo Client.
+import 'cross-fetch/polyfill';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 

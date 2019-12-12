@@ -15,9 +15,11 @@
   "extends": ["airbnb", "prettier"],
   "plugins": ["react-hooks", "prettier"],
   "rules": {
-    "react-hooks/rules-of-hooks": "error",
+    "import/no-unresolved": 0,
     "prettier/prettier": "error",
+    "react-hooks/rules-of-hooks": "error",
     "react/jsx-filename-extension": 0,
-    "import/no-unresolved": 0
+    "react/jsx-one-expression-per-line": 0,
+    "react/prop-types": 0
   }
 }

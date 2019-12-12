@@ -13,4 +13,6 @@ const server = new ApolloServer({ typeDefs, resolvers, context });
 
 // Start the server!
 if (process.env.NODE_ENV !== 'test')
-  server.listen({ port: 3000 }).then(({ url }) => console.log(`🚀 Here we GO!: ${url}`));
+  server
+    .listen({ port: 3000 })
+    .then(({ url }) => console.log(`🚀 API running at: ${url}`));

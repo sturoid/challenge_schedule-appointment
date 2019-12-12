@@ -1,5 +1,5 @@
 import React from 'react';
-import { childrenType } from '~/lib/prop-types';
+import { childrenType } from '../../lib/prop-types';
 
 export default class ErrorBoundary extends React.Component {
   constructor(props) {
