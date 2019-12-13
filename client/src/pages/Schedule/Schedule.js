@@ -35,7 +35,6 @@ const Schedule = ({ coaches, addAppointment }) => {
     setShowConfirm(true);
   }
 
-  // TODO: Submit to API and update redirect to thank you.
   async function submitBooking() {
     try {
       setLoading(true);
