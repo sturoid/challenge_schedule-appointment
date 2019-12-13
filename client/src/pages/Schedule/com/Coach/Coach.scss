@@ -1,15 +1,22 @@
 .coach {
   padding-bottom: 20px;
+
   .coach-name {
     padding: 20px;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 300;
     color: var(--grey800);
   }
 
   .coach-time-slots {
+    .coach-time-slot:first-child {
+      border-top: 1px solid var(--grey200);
+    }
+
     .coach-time-slot {
       border-bottom: 1px solid var(--grey200);
+      border-right: 1px solid var(--grey200);
+      border-left: 1px solid var(--grey200);
       color: var(--grey700);
       padding: 15px 0;
       display: flex;
@@ -22,6 +29,7 @@
         cursor: pointer;
       }
     }
+
     .booked {
       color: var(--grey500);
       background: var(--blue);

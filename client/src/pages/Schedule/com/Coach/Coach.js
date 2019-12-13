@@ -2,7 +2,7 @@ import React from 'react';
 import { format } from 'date-fns';
 import { getScheduleTime } from '../../../../lib/lists/lists';
 import setAvailability from './Coach.utils';
-import { getDateFromTimeSlot } from '../../utils';
+import { getDateFromTimeSlot } from '../../Schedule.utils';
 import './Coach.scss';
 
 const CoachSchedule = ({ appointments = [], bookTimeSlot, coach }) => {
@@ -15,8 +15,8 @@ const CoachSchedule = ({ appointments = [], bookTimeSlot, coach }) => {
           <div
             key={String(ts.hours + ts.minutes)}
             className={`coach-time-slot${ts.booked ? ' booked' : ''}`}
-            onClick={() => bookTimeSlot(ts, coach)}
-            onKeyDown={() => bookTimeSlot(ts, coach)}
+            onClick={() => (ts.booked ? null : bookTimeSlot(ts, coach))}
+            onKeyDown={() => (ts.booked ? null : bookTimeSlot(ts, coach))}
             role="button"
             tabIndex="0"
           >

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { arrayOf, shape, any } from 'prop-types';
+import { Redirect } from 'react-router-dom';
+import { arrayOf, shape, any, func } from 'prop-types';
 import {
   Button,
   Dialog,
@@ -8,9 +9,10 @@ import {
   DialogActions
 } from '@material-ui/core';
 import { format } from 'date-fns';
+import Loading from '../../shared/Loading';
 import Page from '../../shared/Page';
 import Coach from './com/Coach';
-import { getDateFromTimeSlot } from './utils';
+import { getDateFromTimeSlot } from './Schedule.utils';
 import './Schedule.scss';
 
 const ScheduleHead = () => {
@@ -22,9 +24,11 @@ const ScheduleHead = () => {
   );
 };
 
-const Schedule = ({ coaches }) => {
+const Schedule = ({ coaches, addAppointment }) => {
+  const [loading, setLoading] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
   const [booking, setBooking] = useState({});
+  const [redirectToSuccess, setRedirectToSuccess] = useState(false);
 
   function bookTimeSlot(timeSlot, coach) {
     setBooking({ timeSlot, coach });
@@ -32,13 +36,28 @@ const Schedule = ({ coaches }) => {
   }
 
   // TODO: Submit to API and update redirect to thank you.
-  function submitBooking() {
-    // eslint-disable-next-line
-    console.log(booking);
+  async function submitBooking() {
+    try {
+      setLoading(true);
+      const start = getDateFromTimeSlot(booking.timeSlot);
+      await addAppointment({
+        variables: {
+          input: { start: new Date(start).toISOString(), coachId: booking.coach.id }
+        }
+      });
+      setShowConfirm(false);
+      setLoading(false);
+      setRedirectToSuccess(true);
+    } catch (e) {
+      setLoading(false);
+      alert(e);
+    }
   }
 
   return (
     <Page>
+      {loading ? <Loading /> : null}
+      {redirectToSuccess ? <Redirect to="/thank-you" /> : null}
       <ScheduleHead />
       <section className="schedule">
         {booking && booking.coach ? (
@@ -51,7 +70,7 @@ const Schedule = ({ coaches }) => {
             <DialogContent>
               <div className="confirm-coach-name">{booking.coach.name}</div>
               <div className="confirm-date">
-                {format(getDateFromTimeSlot(booking.timeSlot), 'MM/dd/yyyy hh:mma')}
+                {format(getDateFromTimeSlot(booking.timeSlot), 'PPPPp')}
               </div>
             </DialogContent>
             <DialogActions className="confirm-actions">
@@ -71,7 +90,8 @@ const Schedule = ({ coaches }) => {
 };
 
 Schedule.props = {
-  coaches: arrayOf(shape(any))
+  coaches: arrayOf(shape(any)),
+  addApointment: func
 };
 
 export default Schedule;

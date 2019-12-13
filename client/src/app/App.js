@@ -4,6 +4,7 @@ import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 import ErrorBoundary from '../shared/errors/ErrorBoundary';
 import Schedule from '../pages/Schedule';
+import ThankYou from '../pages/ThankYou';
 
 // Global styles.
 import 'normalize.css';
@@ -17,9 +18,13 @@ const App = () => (
     <Router>
       <ApolloProvider client={client}>
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Schedule />
           </Route>
+          <Route path="/thank-you">
+            <ThankYou />
+          </Route>
+          <Route render={() => <h1>404 Not Found</h1>} />
         </Switch>
       </ApolloProvider>
     </Router>
