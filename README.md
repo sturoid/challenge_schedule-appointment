@@ -1,8 +1,15 @@
 # BetterUp Full Stack Engineer Interview Project
 
-Thanks again for your interest in the position! We are excited to dive into the fun part of the interview process!
+## Running the application locally
+Node > 8 is required
 
-Our goal is to focus conversations on real code instead of whiteboard logic puzzles.
+Seed the database
+> npm run seed
+
+Run the client and api
+> npm run dev
+
+The api will be running at localhost:3000 and the client will be running at localhost:4000
 
 ## Your mission...if you choose to accept it...
 
