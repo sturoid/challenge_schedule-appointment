@@ -1,4 +1,4 @@
-# Full Stack Engineer Project
+# Appointment scheduler
 
 ## Running the application locally
 Node > 8 is required
